@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\diogo\\Desktop\\Year 4\\Games Egine\\Games Engine.csproj": {}
+    "C:\\Users\\diogo\\OneDrive\\Documents\\GitHub\\GamesEngineAsg\\Games Engine.csproj": {}
   },
   "projects": {
-    "C:\\Users\\diogo\\Desktop\\Year 4\\Games Egine\\Games Engine.csproj": {
+    "C:\\Users\\diogo\\OneDrive\\Documents\\GitHub\\GamesEngineAsg\\Games Engine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diogo\\Desktop\\Year 4\\Games Egine\\Games Engine.csproj",
+        "projectUniqueName": "C:\\Users\\diogo\\OneDrive\\Documents\\GitHub\\GamesEngineAsg\\Games Engine.csproj",
         "projectName": "Games Engine",
-        "projectPath": "C:\\Users\\diogo\\Desktop\\Year 4\\Games Egine\\Games Engine.csproj",
+        "projectPath": "C:\\Users\\diogo\\OneDrive\\Documents\\GitHub\\GamesEngineAsg\\Games Engine.csproj",
         "packagesPath": "C:\\Users\\diogo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diogo\\Desktop\\Year 4\\Games Egine\\.mono\\temp\\obj\\",
+        "outputPath": "C:\\Users\\diogo\\OneDrive\\Documents\\GitHub\\GamesEngineAsg\\.mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\diogo\\AppData\\Roaming\\NuGet\\NuGet.Config"

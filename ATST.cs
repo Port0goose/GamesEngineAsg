@@ -1,21 +1,53 @@
 using Godot;
 using System;
 
-public class ATST : Spatial
+public class ATST : KinematicBody
 {
-    // Declare member variables here. Examples:
-    // private int a = 2;
-    // private string b = "text";
+    //physics
+    float moveSpeed = 5;
+    float jumpForce = 5;
+    float gravity = 12;
 
-    // Called when the node enters the scene tree for the first time.
+    //camera look
+    float minLookAngle = -90;
+    float maxLookAngle = 90;
+    float lookSensitivity = 10;
+
+    //vectors
+    Vector3 vel = Vector3.Zero;
+    Vector2 mouseDelta = Vector2.Zero;
+
+    //components
+    Camera PlayerMovement;
+
     public override void _Ready()
     {
-        
+        PlayerMovement = GetNode<Camera>("PlayerMovement");
     }
 
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
+    public override void _PhysicsProcess(float delta)
+    {
+        var input  = new Vector2();
+
+        if(Input.IsActionJustPressed("move_forward"))
+        {
+            input.y -= 1;
+        }
+
+        if(Input.IsActionJustPressed("move_backwards"))
+        {
+            input.y += 1;
+        }
+
+        if(Input.IsActionJustPressed("move_right"))
+        {
+            input.y += 1;
+        }
+
+        if(Input.IsActionJustPressed("move_left"))
+        {
+            input.y -= 1;
+        }
+    }
+
 }

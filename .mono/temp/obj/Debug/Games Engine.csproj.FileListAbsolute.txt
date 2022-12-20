@@ -7,3 +7,12 @@ C:\Users\diogo\Desktop\Year 4\Games Egine\.mono\temp\obj\Debug\Games Engine.Asse
 C:\Users\diogo\Desktop\Year 4\Games Egine\.mono\temp\obj\Debug\Games Engine.csproj.CoreCompileInputs.cache
 C:\Users\diogo\Desktop\Year 4\Games Egine\.mono\temp\obj\Debug\Games Engine.dll
 C:\Users\diogo\Desktop\Year 4\Games Egine\.mono\temp\obj\Debug\Games Engine.pdb
+C:\Users\diogo\OneDrive\Documents\GitHub\GamesEngineAsg\.mono\temp\bin\Debug\Games Engine.dll
+C:\Users\diogo\OneDrive\Documents\GitHub\GamesEngineAsg\.mono\temp\bin\Debug\Games Engine.pdb
+C:\Users\diogo\OneDrive\Documents\GitHub\GamesEngineAsg\.mono\temp\obj\Debug\Games Engine.csproj.AssemblyReference.cache
+C:\Users\diogo\OneDrive\Documents\GitHub\GamesEngineAsg\.mono\temp\obj\Debug\Games Engine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diogo\OneDrive\Documents\GitHub\GamesEngineAsg\.mono\temp\obj\Debug\Games Engine.AssemblyInfoInputs.cache
+C:\Users\diogo\OneDrive\Documents\GitHub\GamesEngineAsg\.mono\temp\obj\Debug\Games Engine.AssemblyInfo.cs
+C:\Users\diogo\OneDrive\Documents\GitHub\GamesEngineAsg\.mono\temp\obj\Debug\Games Engine.csproj.CoreCompileInputs.cache
+C:\Users\diogo\OneDrive\Documents\GitHub\GamesEngineAsg\.mono\temp\obj\Debug\Games Engine.dll
+C:\Users\diogo\OneDrive\Documents\GitHub\GamesEngineAsg\.mono\temp\obj\Debug\Games Engine.pdb
