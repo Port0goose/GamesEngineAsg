@@ -141,7 +141,7 @@ skeleton = NodePath("../..")
 material/0 = SubResource( 13 )
 
 [node name="Cannon" type="MeshInstance" parent="Body/Cube"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.296686, 0.180004, 1.20028 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.296686, 0.180004, 1.1668 )
 mesh = SubResource( 5 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 20 )
@@ -159,7 +159,7 @@ skeleton = NodePath("../../..")
 material/0 = SubResource( 22 )
 
 [node name="Cannon2" type="MeshInstance" parent="Body/Cube"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.296686, 0.180318, -1.2 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.297, 0.18, -1.167 )
 mesh = SubResource( 5 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 23 )
@@ -177,19 +177,19 @@ skeleton = NodePath("../../..")
 material/0 = SubResource( 25 )
 
 [node name="FrontCannon" type="MeshInstance" parent="Body/Cube"]
-transform = Transform( 1, 0, 0, 0, 0.0177141, -0.999843, 0, 0.999843, 0.0177141, 2.2093, -0.477235, -0.0139264 )
+transform = Transform( 1, 0, 0, 0, 0.0177141, -0.999843, 0, 0.999843, 0.0177141, 1.9727, -0.477235, -0.0139264 )
 mesh = SubResource( 5 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 26 )
 
 [node name="CannonBarrel" type="MeshInstance" parent="Body/Cube/FrontCannon"]
-transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 1.66533e-16, 1, 0.333958, 0.190594, 0.0154266 )
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 3.33067e-16, 1, 0.333958, 0.157737, 0.0148444 )
 mesh = SubResource( 7 )
 skeleton = NodePath("../../..")
 material/0 = SubResource( 27 )
 
 [node name="CannonBarrel2" type="MeshInstance" parent="Body/Cube/FrontCannon"]
-transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0.334, -0.178, 0.015 )
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 1.11022e-16, 1, 0.334, -0.171349, 0.0151176 )
 mesh = SubResource( 7 )
 skeleton = NodePath("../../..")
 material/0 = SubResource( 28 )

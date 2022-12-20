@@ -3,51 +3,49 @@ using System;
 
 public class ATST : KinematicBody
 {
-    //physics
-    float moveSpeed = 5;
-    float jumpForce = 5;
-    float gravity = 12;
-
-    //camera look
-    float minLookAngle = -90;
-    float maxLookAngle = 90;
-    float lookSensitivity = 10;
-
-    //vectors
-    Vector3 vel = Vector3.Zero;
-    Vector2 mouseDelta = Vector2.Zero;
-
-    //components
-    Camera PlayerMovement;
-
-    public override void _Ready()
-    {
-        PlayerMovement = GetNode<Camera>("PlayerMovement");
-    }
+// Declare member variables
+    private Vector3 vel;
+    private float gravity = 100;
+    private float speed = 20;
+    private float jump = 20;
+    private bool OnGround = true;
 
     public override void _PhysicsProcess(float delta)
     {
-        var input  = new Vector2();
+        vel.x = 0;
+        vel.z = 0;
 
-        if(Input.IsActionJustPressed("move_forward"))
-        {
-            input.y -= 1;
-        }
+        // Handle input and movement
+        var input = new Vector3();
+        if (Input.IsActionPressed("move_forward"))
+            input.x += 1;
 
-        if(Input.IsActionJustPressed("move_backwards"))
-        {
-            input.y += 1;
-        }
+        if (Input.IsActionPressed("move_backwards"))
+            input.x -= 1;
 
-        if(Input.IsActionJustPressed("move_right"))
-        {
-            input.y += 1;
-        }
+        if (Input.IsActionPressed("move_left"))
+            input.z -= 1;
 
-        if(Input.IsActionJustPressed("move_left"))
+        if (Input.IsActionPressed("move_right"))
+            input.z += 1;
+
+        input = input.Normalized();
+
+        var forward = GlobalTransform.basis.z;
+        var right = GlobalTransform.basis.x;
+
+        var relativDir = (forward * input.z + right * input.x);
+
+        vel.x = relativDir.x * speed;
+        vel.z = relativDir.z * speed;
+
+        vel.y -= gravity * delta;
+
+        vel = MoveAndSlide(vel, Vector3.Up);
+
+        if(Input.IsActionPressed("jump") && OnGround == true)
         {
-            input.y -= 1;
+            vel.y = jump;
         }
     }
-
 }
