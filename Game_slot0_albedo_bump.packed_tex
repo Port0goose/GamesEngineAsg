@@ -1,0 +1,8 @@
+{
+	"contains_albedo": true,
+	"resolution": 512,
+	"src": {
+		"a": "res://textures/TexturesCom_Pavement_ConcreteGeometric_512_height-transformed.png",
+		"rgb": "res://textures/TexturesCom_Pavement_ConcreteGeometric_512_albedo-transformed.png"
+	}
+}
