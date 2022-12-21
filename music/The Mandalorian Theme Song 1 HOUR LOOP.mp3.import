@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/The Mandalorian Theme Song 1 HOUR LOOP.mp3-bfe0a01b4697652dfaff0eec18bf4a9b.mp3str"
+
+[deps]
+
+source_file="res://music/The Mandalorian Theme Song 1 HOUR LOOP.mp3"
+dest_files=[ "res://.import/The Mandalorian Theme Song 1 HOUR LOOP.mp3-bfe0a01b4697652dfaff0eec18bf4a9b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
