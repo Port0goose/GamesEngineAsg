@@ -41,7 +41,7 @@ environment = SubResource( 2 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8099, 9.32244, 5.01212 )
 
 [node name="PlayerMovement" type="Camera" parent="ATST"]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.61338, 7.6027, 0.09272 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.63407, 7.6027, 0.09272 )
 current = true
 fov = 100.0
 near = 0.01

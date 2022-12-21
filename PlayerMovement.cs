@@ -14,7 +14,6 @@ public class PlayerMovement : Camera
 
             Vector3 currentPitch = RotationDegrees;
 
-            currentPitch.y -= MouseDelta.Relative.x * MouseSensitivity;
             // player.SetRotationDegrees(currentPitch);
             RotationDegrees = currentPitch;
 
@@ -23,9 +22,7 @@ public class PlayerMovement : Camera
             //change the current rotation by the relative mouse coor change on the y Axis
             currentTilt.x -= MouseDelta.Relative.y * MouseSensitivity;
 
-            currentTilt.x = Mathf.Clamp(currentTilt.x, -90, 90);
-
-            currentTilt.y = Mathf.Clamp(currentTilt.y, -180, 0);
+            currentTilt.x = Mathf.Clamp(currentTilt.x, -40, 30);
 
             RotationDegrees = currentTilt;
         }
