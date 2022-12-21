@@ -1,11 +1,11 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://ATST.cs" type="Script" id=1]
 [ext_resource path="res://Cube.cs" type="Script" id=2]
 
 [sub_resource type="Animation" id=39]
 resource_name = "Back"
-length = 4.5
+length = 4.0
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
@@ -37,7 +37,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 2.5, 3, 3.5, 4.5 ),
+"times": PoolRealArray( 2, 2.5, 3, 4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, -22.491 ), Vector3( 0, 0, -38.193 ), Vector3( 0, 0, 0 ) ]
@@ -49,7 +49,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 2.5, 3, 3.5, 4.5 ),
+"times": PoolRealArray( 2, 2.5, 3, 4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, 37.673 ), Vector3( 0, 0, 0 ) ]
@@ -57,7 +57,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id=37]
 resource_name = "Legs"
-length = 4.5
+length = 4.0
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:rotation_degrees")
 tracks/0/interp = 1
@@ -89,7 +89,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 2.5, 3, 3.5, 4.5 ),
+"times": PoolRealArray( 2, 2.5, 3, 4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 18.958 ), Vector3( 0, 0, 47.335 ), Vector3( 0, 0, 0 ) ]
@@ -101,7 +101,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 2.5, 3, 3.5, 4.5 ),
+"times": PoolRealArray( 2, 2.5, 3, 4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, -17.118 ), Vector3( 0, 0, -47.236 ), Vector3( 0, 0, 0 ) ]
@@ -228,6 +228,18 @@ height = 0.1
 [sub_resource type="CubeMesh" id=41]
 size = Vector3( 0.1, 2, 1.5 )
 
+[sub_resource type="SpatialMaterial" id=42]
+albedo_color = Color( 0.501961, 0.501961, 0.501961, 1 )
+metallic = 1.0
+
+[sub_resource type="CylinderMesh" id=43]
+top_radius = 0.2
+bottom_radius = 0.2
+height = 0.2
+
+[sub_resource type="CubeMesh" id=44]
+size = Vector3( 0.2, 1, 1.2 )
+
 [sub_resource type="CubeMesh" id=1]
 size = Vector3( 2, 1, 1.99 )
 
@@ -305,7 +317,7 @@ __meta__ = {
 }
 
 [node name="Cube" type="MeshInstance" parent="Body"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.296686, 1.51168, 0 )
+transform = Transform( 0.996538, 0.0831387, 0, -0.0831387, 0.996538, 0, 0, 0, 1, 0.296686, 1.51168, 0 )
 mesh = SubResource( 2 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 13 )
@@ -392,6 +404,19 @@ mesh = SubResource( 40 )
 [node name="Back" type="MeshInstance" parent="Body/Cube"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.55197, 0, 0 )
 mesh = SubResource( 41 )
+material/0 = SubResource( 42 )
+
+[node name="Exhaust" type="MeshInstance" parent="Body/Cube/Back"]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, -0.368589, -0.387925 )
+mesh = SubResource( 43 )
+
+[node name="Exhaust2" type="MeshInstance" parent="Body/Cube/Back"]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, -0.368589, 0.376893 )
+mesh = SubResource( 43 )
+
+[node name="BackPanel" type="MeshInstance" parent="Body/Cube/Back"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.394893, 0 )
+mesh = SubResource( 44 )
 
 [node name="BelowBody" type="MeshInstance" parent="Body"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.175815, 0.04, 0 )

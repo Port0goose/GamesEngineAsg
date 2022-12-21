@@ -52,7 +52,7 @@ far = 1494.0
 script = ExtResource( 8 )
 
 [node name="PlayerMovement2" type="Camera" parent="ATST"]
-transform = Transform( -0.230185, 0.528545, -0.817101, -0.184337, 0.800765, 0.569908, 0.955528, 0.281806, -0.0868938, -4.64009, 13.2997, -0.0330415 )
+transform = Transform( -4.37114e-08, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 2.18557e-08, -3.78552e-08, -5.33171, 12.8574, 0.304264 )
 script = ExtResource( 11 )
 
 [node name="HTerrain" type="Spatial" parent="."]
