@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/John Wiliams - Tatooine Theme.mp3-8048d5ff317fd57bbb3886be6f8b3225.mp3str"
+
+[deps]
+
+source_file="res://music/John Wiliams - Tatooine Theme.mp3"
+dest_files=[ "res://.import/John Wiliams - Tatooine Theme.mp3-8048d5ff317fd57bbb3886be6f8b3225.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -9,7 +9,7 @@
 [ext_resource path="res://Game_slot0_albedo_bump.packed_tex" type="Texture" id=7]
 [ext_resource path="res://PlayerMovement.cs" type="Script" id=8]
 [ext_resource path="res://textures/TexturesCom_DesertLighthouse_1K_hdri_sphere_tone.jpg" type="Texture" id=9]
-[ext_resource path="res://music/The Mandalorian Theme Song 1 HOUR LOOP.mp3" type="AudioStream" id=10]
+[ext_resource path="res://music/John Wiliams - Tatooine Theme.mp3" type="AudioStream" id=10]
 [ext_resource path="res://PlayerMovement2.cs" type="Script" id=11]
 
 [sub_resource type="PanoramaSky" id=3]
@@ -81,6 +81,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.3587, 0 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
+volume_db = -20.0
 autoplay = true
 
 [editable path="ATST"]
