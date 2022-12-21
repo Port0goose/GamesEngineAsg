@@ -56,11 +56,12 @@ transform = Transform( -4.37114e-08, 0.5, -0.866025, 0, 0.866025, 0.5, 1, 2.1855
 script = ExtResource( 11 )
 
 [node name="HTerrain" type="Spatial" parent="."]
+transform = Transform( 1.8, 0, 0, 0, 1, 0, 0, 0, 1.8, 0, 0, 0 )
 script = ExtResource( 5 )
 lod_scale = 2.0
 centered = true
 _terrain_data = ExtResource( 2 )
-chunk_size = 32
+chunk_size = 64
 collision_enabled = true
 collision_layer = 1
 collision_mask = 1
