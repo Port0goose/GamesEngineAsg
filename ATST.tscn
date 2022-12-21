@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://ATST.cs" type="Script" id=1]
 [ext_resource path="res://Cube.cs" type="Script" id=2]
@@ -220,6 +220,11 @@ metallic = 1.0
 albedo_color = Color( 0.427451, 0.427451, 0.427451, 1 )
 metallic = 1.0
 
+[sub_resource type="CylinderMesh" id=40]
+top_radius = 0.5
+bottom_radius = 0.8
+height = 0.1
+
 [sub_resource type="CubeMesh" id=1]
 size = Vector3( 2, 1, 1.99 )
 
@@ -376,6 +381,10 @@ material/0 = SubResource( 14 )
 transform = Transform( 0.975029, 0.222076, 0, -0.222076, 0.975029, 0, 0, 0, 1, 1.59135, 1.035, -0.447 )
 mesh = SubResource( 10 )
 material/0 = SubResource( 15 )
+
+[node name="TopHatch" type="MeshInstance" parent="Body/Cube"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.81281, 1.49351, 0 )
+mesh = SubResource( 40 )
 
 [node name="BelowBody" type="MeshInstance" parent="Body"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 0 )
