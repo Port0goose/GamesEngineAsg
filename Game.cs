@@ -12,8 +12,9 @@ public class Game : Spatial
     public override void _Ready()
     {
         Input.MouseMode = Input.MouseModeEnum.Captured;
-        // animationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
+        //Camera 1 First person view
         Camera = GetNode<Camera>($"ATST/PlayerMovement");
+        //Camera 2 Third person view
         Camera2 = GetNode<Camera>($"ATST/PlayerMovement2");
     }
 

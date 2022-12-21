@@ -10,11 +10,9 @@ public class PlayerMovement : Camera
         if(inputEvent is InputEventMouseMotion) {
 
             var MouseDelta = inputEvent as InputEventMouseMotion;
-            // Input.MouseMode(Input.MouseMode.Captured);
 
             Vector3 currentPitch = RotationDegrees;
 
-            // player.SetRotationDegrees(currentPitch);
             RotationDegrees = currentPitch;
 
             Vector3 currentTilt = RotationDegrees;//grab current rotation of camera.

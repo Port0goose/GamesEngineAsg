@@ -16,12 +16,11 @@ public class Cube : MeshInstance
         if(inputEvent is InputEventMouseMotion) {
 
             var MouseDelta = inputEvent as InputEventMouseMotion;
-            // Input.MouseMode(Input.MouseMode.Captured);
 
             Vector3 currentPitch = player.RotationDegrees;
 
             currentPitch.y -= MouseDelta.Relative.x * MouseSensitivity;
-            // player.SetRotationDegrees(currentPitch);
+
             player.RotationDegrees = currentPitch;
 
             Vector3 currentTilt = player.RotationDegrees;//grab current rotation of camera.

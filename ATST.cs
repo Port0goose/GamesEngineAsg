@@ -3,7 +3,7 @@ using System;
 
 public class ATST : KinematicBody
 {
-// Declare member variables
+    // Declare member variables
     private Vector3 vel;
     private float gravity = 100;
     private float speed = 2;
@@ -64,11 +64,13 @@ public class ATST : KinematicBody
 
     public void PlayAnimation(string Legs)
     {
+        //forward leg movement
         animationPlayer.Play(Legs);
     }
 
         public void PlayAnimation2(string Back)
     {
+        //backwards leg movement
         animationPlayer.Play(Back);
     }
 }
