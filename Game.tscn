@@ -18,10 +18,10 @@ textures = [ [ ExtResource( 7 ) ], [ ExtResource( 6 ) ] ]
 script = ExtResource( 3 )
 
 [node name="ATST" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8099, 13.7304, 5.01212 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8099, 9.32244, 5.01212 )
 
 [node name="PlayerMovement" type="Camera" parent="ATST"]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.17254, 7.6027, 0.09272 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.63557, 7.6027, 0.09272 )
 current = true
 fov = 100.0
 near = 0.01
