@@ -27,6 +27,7 @@ public class ATST : KinematicBody
         if (Input.IsActionPressed("move_backwards"))
         {
             input.x -= 1;
+            animationPlayer.Play("Back");
         }
 
         if (Input.IsActionPressed("move_left"))
@@ -64,5 +65,10 @@ public class ATST : KinematicBody
     public void PlayAnimation(string Legs)
     {
         animationPlayer.Play(Legs);
+    }
+
+        public void PlayAnimation2(string Back)
+    {
+        animationPlayer.Play(Back);
     }
 }
