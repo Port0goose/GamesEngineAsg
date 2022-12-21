@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://ATST.cs" type="Script" id=1]
 [ext_resource path="res://Cube.cs" type="Script" id=2]
@@ -225,6 +225,9 @@ top_radius = 0.5
 bottom_radius = 0.8
 height = 0.1
 
+[sub_resource type="CubeMesh" id=41]
+size = Vector3( 0.1, 2, 1.5 )
+
 [sub_resource type="CubeMesh" id=1]
 size = Vector3( 2, 1, 1.99 )
 
@@ -319,7 +322,7 @@ mesh = SubResource( 11 )
 material/0 = SubResource( 12 )
 
 [node name="Cannon" type="MeshInstance" parent="Body/Cube"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.296686, 0.180004, 1.1668 )
+transform = Transform( 0.939693, 0, -0.34202, 0, 1, 0, 0.34202, 0, 0.939693, -0.296686, 0.180004, 1.1668 )
 mesh = SubResource( 5 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 20 )
@@ -337,7 +340,7 @@ skeleton = NodePath("../../..")
 material/0 = SubResource( 22 )
 
 [node name="Cannon2" type="MeshInstance" parent="Body/Cube"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.297, 0.18, -1.167 )
+transform = Transform( 0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, -0.297, 0.18, -1.167 )
 mesh = SubResource( 5 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 23 )
@@ -361,13 +364,13 @@ skeleton = NodePath("../..")
 material/0 = SubResource( 26 )
 
 [node name="CannonBarrel" type="MeshInstance" parent="Body/Cube/FrontCannon"]
-transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 3.33067e-16, 1, 0.333958, 0.157737, 0.0148444 )
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 4.44089e-16, 1, 0.0981534, 0.157737, 0.0148444 )
 mesh = SubResource( 7 )
 skeleton = NodePath("../../..")
 material/0 = SubResource( 27 )
 
 [node name="CannonBarrel2" type="MeshInstance" parent="Body/Cube/FrontCannon"]
-transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 1.11022e-16, 1, 0.334, -0.171349, 0.0151176 )
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 1.11022e-16, 1, 0.098, -0.171, 0.015 )
 mesh = SubResource( 7 )
 skeleton = NodePath("../../..")
 material/0 = SubResource( 28 )
@@ -385,6 +388,10 @@ material/0 = SubResource( 15 )
 [node name="TopHatch" type="MeshInstance" parent="Body/Cube"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.81281, 1.49351, 0 )
 mesh = SubResource( 40 )
+
+[node name="Back" type="MeshInstance" parent="Body/Cube"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.55197, 0, 0 )
+mesh = SubResource( 41 )
 
 [node name="BelowBody" type="MeshInstance" parent="Body"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 0 )
