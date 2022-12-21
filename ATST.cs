@@ -30,16 +30,6 @@ public class ATST : KinematicBody
             animationPlayer.Play("Back");
         }
 
-        if (Input.IsActionPressed("move_left"))
-        {
-            input.z -= 1;
-        }
-
-        if (Input.IsActionPressed("move_right"))
-        {
-            input.z += 1;
-        }
-
         input = input.Normalized();
 
         var forward = GlobalTransform.basis.z;
