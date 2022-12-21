@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://ATST.tscn" type="PackedScene" id=1]
 [ext_resource path="res://terrain_data/data.hterrain" type="Resource" id=2]
@@ -9,6 +9,16 @@
 [ext_resource path="res://Game_slot0_albedo_bump.packed_tex" type="Texture" id=7]
 [ext_resource path="res://PlayerMovement.cs" type="Script" id=8]
 
+[sub_resource type="ProceduralSky" id=3]
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 3 )
+background_color = Color( 1, 1, 1, 1 )
+background_energy = 1.38
+ambient_light_color = Color( 1, 1, 1, 1 )
+ambient_light_energy = 2.98
+
 [sub_resource type="Resource" id=1]
 script = ExtResource( 4 )
 mode = 0
@@ -17,11 +27,21 @@ textures = [ [ ExtResource( 7 ) ], [ ExtResource( 6 ) ] ]
 [node name="Game" type="Spatial"]
 script = ExtResource( 3 )
 
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.0167311, 0.882661, -0.469713, 0.0314203, 0.470011, 0.882101, 0.999366, 9.31912e-10, -0.0355972, -18.2463, 39.9018, -0.756344 )
+light_energy = 0.0
+light_indirect_energy = 0.0
+light_specular = 0.0
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
 [node name="ATST" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.8099, 9.32244, 5.01212 )
 
 [node name="PlayerMovement" type="Camera" parent="ATST"]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.63557, 7.6027, 0.09272 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.61338, 7.6027, 0.09272 )
 current = true
 fov = 100.0
 near = 0.01
@@ -46,3 +66,5 @@ shader_params/u_ground_uv_scale = 20
 shader_params/u_depth_blending = true
 shader_params/u_triplanar = false
 shader_params/u_tile_reduction = Plane( 0, 0, 0, 0 )
+
+[editable path="ATST"]

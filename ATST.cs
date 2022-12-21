@@ -6,9 +6,10 @@ public class ATST : KinematicBody
 // Declare member variables
     private Vector3 vel;
     private float gravity = 100;
-    private float speed = 20;
-    private float jump = 20;
+    private float speed = 5;
+    private float jump = 30;
     private bool OnGround = true;
+    private AnimationPlayer animationPlayer;
 
     public override void _PhysicsProcess(float delta)
     {
@@ -18,16 +19,25 @@ public class ATST : KinematicBody
         // Handle input and movement
         var input = new Vector3();
         if (Input.IsActionPressed("move_forward"))
+        {
             input.x += 1;
+            animationPlayer.Play("Legs");
+        }
 
         if (Input.IsActionPressed("move_backwards"))
+        {
             input.x -= 1;
+        }
 
         if (Input.IsActionPressed("move_left"))
+        {
             input.z -= 1;
+        }
 
         if (Input.IsActionPressed("move_right"))
+        {
             input.z += 1;
+        }
 
         input = input.Normalized();
 
@@ -43,9 +53,16 @@ public class ATST : KinematicBody
 
         vel = MoveAndSlide(vel, Vector3.Up);
 
-        if(Input.IsActionPressed("jump") && OnGround == true)
+        if(Input.IsActionJustPressed("jump") && OnGround == true)
         {
             vel.y = jump;
         }
+
+        animationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
+    }
+
+    public void PlayAnimation(string Legs)
+    {
+        animationPlayer.Play(Legs);
     }
 }
