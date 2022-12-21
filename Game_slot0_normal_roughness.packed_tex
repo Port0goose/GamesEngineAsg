@@ -3,6 +3,6 @@
 	"resolution": 512,
 	"src": {
 		"a": "#ffffffff",
-		"rgb": "res://textures/TexturesCom_Pavement_ConcreteGeometric_512_normal-transformed.png"
+		"rgb": "res://textures/TexturesCom_Ground_SandDesert2_3x3_512_normal.png"
 	}
 }
