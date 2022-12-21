@@ -394,7 +394,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.55197, 0, 0 )
 mesh = SubResource( 41 )
 
 [node name="BelowBody" type="MeshInstance" parent="Body"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.175815, 0.04, 0 )
 mesh = SubResource( 1 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 29 )

@@ -3,7 +3,7 @@ using System;
 
 public class PlayerMovement2 : Camera
 {
-    public float MouseSensitivity = 0.075f;
+    private float MouseSensitivity = 0.025f;
 
     public override void _Input(InputEvent inputEvent) {
         if(inputEvent is InputEventMouseMotion) {
