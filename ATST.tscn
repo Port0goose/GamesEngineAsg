@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://ATST.cs" type="Script" id=1]
 [ext_resource path="res://Cube.cs" type="Script" id=2]
@@ -167,23 +167,32 @@ size = Vector3( 3, 3, 2 )
 [sub_resource type="SpatialMaterial" id=13]
 metallic = 1.0
 
-[sub_resource type="QuadMesh" id=11]
-size = Vector2( 0.48, 0.5 )
+[sub_resource type="PrismMesh" id=48]
+size = Vector3( 1, 1, 1 )
 
-[sub_resource type="SpatialMaterial" id=12]
-albedo_color = Color( 0, 0, 0, 1 )
+[sub_resource type="SpatialMaterial" id=49]
+metallic = 1.0
 
 [sub_resource type="SphereMesh" id=5]
 radius = 0.25
 height = 0.7
 
-[sub_resource type="SpatialMaterial" id=20]
+[sub_resource type="SpatialMaterial" id=26]
 albedo_color = Color( 0.427451, 0.427451, 0.427451, 1 )
 
 [sub_resource type="CylinderMesh" id=7]
 top_radius = 0.1
 bottom_radius = 0.1
 height = 1.0
+
+[sub_resource type="SpatialMaterial" id=27]
+metallic = 1.0
+
+[sub_resource type="SpatialMaterial" id=28]
+metallic = 1.0
+
+[sub_resource type="SpatialMaterial" id=20]
+albedo_color = Color( 0.427451, 0.427451, 0.427451, 1 )
 
 [sub_resource type="SpatialMaterial" id=21]
 metallic = 1.0
@@ -200,21 +209,21 @@ metallic = 1.0
 [sub_resource type="SpatialMaterial" id=25]
 metallic = 1.0
 
-[sub_resource type="SpatialMaterial" id=26]
-albedo_color = Color( 0.427451, 0.427451, 0.427451, 1 )
-
-[sub_resource type="SpatialMaterial" id=27]
-metallic = 1.0
-
-[sub_resource type="SpatialMaterial" id=28]
-metallic = 1.0
-
 [sub_resource type="CubeMesh" id=10]
-size = Vector3( 0.2, 0.05, 0.5 )
+size = Vector3( 0.2, 0.05, 0.7 )
 
 [sub_resource type="SpatialMaterial" id=14]
 albedo_color = Color( 0.427451, 0.427451, 0.427451, 1 )
 metallic = 1.0
+
+[sub_resource type="PrismMesh" id=50]
+size = Vector3( 0.5, 0.5, 0.5 )
+
+[sub_resource type="SpatialMaterial" id=51]
+albedo_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpatialMaterial" id=52]
+albedo_color = Color( 0, 0, 0, 1 )
 
 [sub_resource type="SpatialMaterial" id=15]
 albedo_color = Color( 0.427451, 0.427451, 0.427451, 1 )
@@ -332,15 +341,28 @@ skeleton = NodePath("../..")
 material/0 = SubResource( 13 )
 script = ExtResource( 2 )
 
-[node name="Window" type="MeshInstance" parent="Body/Cube"]
-transform = Transform( -4.37114e-08, 0, 0.999999, 0, 0.999999, -5.55112e-17, -1, 0, -4.37114e-08, 1.50246, 0.824104, 0.443672 )
-mesh = SubResource( 11 )
-material/0 = SubResource( 12 )
+[node name="Chin" type="MeshInstance" parent="Body/Cube"]
+transform = Transform( -0.470596, 0.882349, 0, -0.882349, -0.470596, 0, 0, 0, 1, 1.59017, -1.26319, 0 )
+mesh = SubResource( 48 )
+material/0 = SubResource( 49 )
 
-[node name="Window2" type="MeshInstance" parent="Body/Cube"]
-transform = Transform( -4.37114e-08, 0, 0.999999, 6.21725e-15, 0.999999, 0, -1, 0, -4.37114e-08, 1.50128, 0.823874, -0.437102 )
-mesh = SubResource( 11 )
-material/0 = SubResource( 12 )
+[node name="FrontCannon" type="MeshInstance" parent="Body/Cube/Chin"]
+transform = Transform( -0.49764, -0.0153649, 0.867247, 0.867383, -0.00881524, 0.497561, 0, 0.999843, 0.0177141, -0.167416, 0.239362, -0.0139264 )
+mesh = SubResource( 5 )
+skeleton = NodePath("../../..")
+material/0 = SubResource( 26 )
+
+[node name="CannonBarrel" type="MeshInstance" parent="Body/Cube/Chin/FrontCannon"]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 4.44089e-16, 1, 0.0981534, 0.157737, 0.0148444 )
+mesh = SubResource( 7 )
+skeleton = NodePath("../../../..")
+material/0 = SubResource( 27 )
+
+[node name="CannonBarrel2" type="MeshInstance" parent="Body/Cube/Chin/FrontCannon"]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 1.11022e-16, 1, 0.098, -0.171, 0.015 )
+mesh = SubResource( 7 )
+skeleton = NodePath("../../../..")
+material/0 = SubResource( 28 )
 
 [node name="Cannon" type="MeshInstance" parent="Body/Cube"]
 transform = Transform( 0.939693, 0, -0.34202, 0, 1, 0, 0.34202, 0, 0.939693, -0.296686, 0.180004, 1.1668 )
@@ -378,31 +400,23 @@ mesh = SubResource( 7 )
 skeleton = NodePath("../../..")
 material/0 = SubResource( 25 )
 
-[node name="FrontCannon" type="MeshInstance" parent="Body/Cube"]
-transform = Transform( 1, 0, 0, 0, 0.0177141, -0.999843, 0, 0.999843, 0.0177141, 1.59483, -0.477235, -0.0139264 )
-mesh = SubResource( 5 )
-skeleton = NodePath("../..")
-material/0 = SubResource( 26 )
-
-[node name="CannonBarrel" type="MeshInstance" parent="Body/Cube/FrontCannon"]
-transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 4.44089e-16, 1, 0.0981534, 0.157737, 0.0148444 )
-mesh = SubResource( 7 )
-skeleton = NodePath("../../..")
-material/0 = SubResource( 27 )
-
-[node name="CannonBarrel2" type="MeshInstance" parent="Body/Cube/FrontCannon"]
-transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 1.11022e-16, 1, 0.098, -0.171, 0.015 )
-mesh = SubResource( 7 )
-skeleton = NodePath("../../..")
-material/0 = SubResource( 28 )
-
 [node name="Hatch" type="MeshInstance" parent="Body/Cube"]
-transform = Transform( 0.975029, 0.222076, 0, -0.222076, 0.975029, 0, 0, 0, 1, 1.58663, 1.03523, 0.446735 )
+transform = Transform( 0.975029, 0.222076, 0, -0.222076, 0.975029, 0, 0, 0, 1, 1.56431, 1.30278, 0.5564 )
 mesh = SubResource( 10 )
 material/0 = SubResource( 14 )
 
+[node name="Window" type="MeshInstance" parent="Body/Cube"]
+transform = Transform( -0.0013172, -0.069744, 0.997564, -0.0188374, -0.997386, -0.0697564, 0.999821, -0.0188834, -4.36049e-08, 1.25209, 1.05473, 0.579993 )
+mesh = SubResource( 50 )
+material/0 = SubResource( 51 )
+
+[node name="Window2" type="MeshInstance" parent="Body/Cube"]
+transform = Transform( -0.0013172, -0.069744, 0.997564, -0.0188374, -0.997386, -0.0697564, 0.999821, -0.0188834, -4.36049e-08, 1.252, 1.055, -0.58 )
+mesh = SubResource( 50 )
+material/0 = SubResource( 52 )
+
 [node name="Hatch2" type="MeshInstance" parent="Body/Cube"]
-transform = Transform( 0.975029, 0.222076, 0, -0.222076, 0.975029, 0, 0, 0, 1, 1.59135, 1.035, -0.447 )
+transform = Transform( 0.975029, 0.222076, 0, -0.222076, 0.975029, 0, 0, 0, 1, 1.571, 1.303, -0.556 )
 mesh = SubResource( 10 )
 material/0 = SubResource( 15 )
 
