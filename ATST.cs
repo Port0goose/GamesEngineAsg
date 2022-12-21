@@ -6,8 +6,8 @@ public class ATST : KinematicBody
     // Declare member variables
     private Vector3 vel;
     private float gravity = 100;
-    private float speed = 2;
-    private float jump = 30;
+    private float speed = 5;
+    private float jump = 35;
     private bool OnGround = true;
     private AnimationPlayer animationPlayer;
 

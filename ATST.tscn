@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://ATST.cs" type="Script" id=1]
 [ext_resource path="res://Cube.cs" type="Script" id=2]
@@ -13,10 +13,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 1, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 1, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, -17.32 ), Vector3( 0, 0, -37.086 ), Vector3( 0, 0, 0 ) ]
+"values": [ Vector3( 0, 0, -28 ), Vector3( 0, 0, -17.32 ), Vector3( 0, 0, -38 ), Vector3( 0, 0, -28 ), Vector3( 0, 0, -28 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Leg/LegConnection3:rotation_degrees")
@@ -28,7 +28,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.5, 1, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, 36.518 ), Vector3( 0, 0, 0 ) ]
+"values": [ Vector3( 0, 0, 28 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, 38 ), Vector3( 0, 0, 28 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("../LegConnection2:rotation_degrees")
@@ -40,7 +40,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 2, 2.5, 3, 4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, -22.491 ), Vector3( 0, 0, -38.193 ), Vector3( 0, 0, 0 ) ]
+"values": [ Vector3( 0, 0, -28 ), Vector3( 0, 0, -22.491 ), Vector3( 0, 0, -38.193 ), Vector3( 0, 0, -28 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("../LegConnection2/Leg2/LegConnection4:rotation_degrees")
@@ -52,7 +52,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 2, 2.5, 3, 4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, 37.673 ), Vector3( 0, 0, 0 ) ]
+"values": [ Vector3( 0, 0, 28 ), Vector3( 0, 0, 0 ), Vector3( 0, 0, 37.673 ), Vector3( 0, 0, 28 ) ]
 }
 
 [sub_resource type="Animation" id=37]
@@ -68,7 +68,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5, 1, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0.0658958, 0.0264338, 21.858 ), Vector3( 0, 0, 43.221 ), Vector3( 0, 0, 0 ) ]
+"values": [ Vector3( 0, 0, -28 ), Vector3( 0.0658958, 0.0264338, 21.858 ), Vector3( 0, 0, 43.221 ), Vector3( 0, 0, -28 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Leg/LegConnection3:rotation_degrees")
@@ -80,7 +80,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.5, 1, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( -0.00389324, -0.023188, -19.062 ), Vector3( 0, 0, -43.279 ), Vector3( 0, 0, 0 ) ]
+"values": [ Vector3( 0, 0, 28 ), Vector3( -0.00389324, -0.023188, -19.062 ), Vector3( 0, 0, -43.279 ), Vector3( 0, 0, 28 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("../LegConnection2:rotation_degrees")
@@ -92,7 +92,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 2, 2.5, 3, 4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 18.958 ), Vector3( 0, 0, 47.335 ), Vector3( 0, 0, 0 ) ]
+"values": [ Vector3( 0, 0, -28 ), Vector3( 0, 0, 18.958 ), Vector3( 0, 0, 47.335 ), Vector3( 0, 0, -28 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("../LegConnection2/Leg2/LegConnection4:rotation_degrees")
@@ -104,7 +104,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 2, 2.5, 3, 4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, -17.118 ), Vector3( 0, 0, -47.236 ), Vector3( 0, 0, 0 ) ]
+"values": [ Vector3( 0, 0, 28 ), Vector3( 0, 0, -17.118 ), Vector3( 0, 0, -47.236 ), Vector3( 0, 0, 28 ) ]
 }
 
 [sub_resource type="Animation" id=38]
@@ -119,7 +119,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ) ]
+"values": [ Vector3( 0, 0, -28 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Leg/LegConnection3:rotation_degrees")
@@ -131,7 +131,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ) ]
+"values": [ Vector3( 0, 0, 28 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("../LegConnection2:rotation_degrees")
@@ -143,7 +143,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ) ]
+"values": [ Vector3( 0, 0, -28 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("../LegConnection2/Leg2/LegConnection4:rotation_degrees")
@@ -155,7 +155,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ) ]
+"values": [ Vector3( 0, 0, 28 ) ]
 }
 
 [sub_resource type="BoxShape" id=36]
@@ -237,8 +237,17 @@ top_radius = 0.2
 bottom_radius = 0.2
 height = 0.2
 
+[sub_resource type="SpatialMaterial" id=45]
+metallic = 1.0
+
+[sub_resource type="SpatialMaterial" id=46]
+metallic = 1.0
+
 [sub_resource type="CubeMesh" id=44]
 size = Vector3( 0.2, 1, 1.2 )
+
+[sub_resource type="SpatialMaterial" id=47]
+metallic = 1.0
 
 [sub_resource type="CubeMesh" id=1]
 size = Vector3( 2, 1, 1.99 )
@@ -409,14 +418,17 @@ material/0 = SubResource( 42 )
 [node name="Exhaust" type="MeshInstance" parent="Body/Cube/Back"]
 transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, -0.368589, -0.387925 )
 mesh = SubResource( 43 )
+material/0 = SubResource( 45 )
 
 [node name="Exhaust2" type="MeshInstance" parent="Body/Cube/Back"]
 transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, -0.368589, 0.376893 )
 mesh = SubResource( 43 )
+material/0 = SubResource( 46 )
 
 [node name="BackPanel" type="MeshInstance" parent="Body/Cube/Back"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.394893, 0 )
 mesh = SubResource( 44 )
+material/0 = SubResource( 47 )
 
 [node name="BelowBody" type="MeshInstance" parent="Body"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.175815, 0.04, 0 )
@@ -425,7 +437,7 @@ skeleton = NodePath("../..")
 material/0 = SubResource( 29 )
 
 [node name="LegConnection" type="MeshInstance" parent="Body/BelowBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45058e-08, -0.0423837, 1.45752 )
+transform = Transform( 0.882948, 0.469472, 0, -0.469472, 0.882948, 0, 0, 0, 1, 1.78814e-07, -0.0423837, 1.45752 )
 mesh = SubResource( 3 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 30 )
@@ -437,7 +449,7 @@ skeleton = NodePath("../../..")
 material/0 = SubResource( 16 )
 
 [node name="LegConnection3" type="MeshInstance" parent="Body/BelowBody/LegConnection/Leg"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38419e-07, -1.46519, 3.98159e-05 )
+transform = Transform( 0.882948, -0.469472, 0, 0.469472, 0.882948, 0, 0, 0, 1, -2.38419e-07, -1.46519, 3.98159e-05 )
 mesh = SubResource( 3 )
 skeleton = NodePath("../../../..")
 material/0 = SubResource( 31 )
@@ -455,7 +467,7 @@ skeleton = NodePath("../../../../../..")
 material/0 = SubResource( 32 )
 
 [node name="LegConnection2" type="MeshInstance" parent="Body/BelowBody"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45058e-08, -0.0423837, -1.458 )
+transform = Transform( 0.882948, 0.469472, 0, -0.469472, 0.882948, 0, 0, 0, 1, 5.96046e-08, -0.0423837, -1.458 )
 mesh = SubResource( 3 )
 skeleton = NodePath("../..")
 material/0 = SubResource( 33 )
@@ -467,7 +479,7 @@ skeleton = NodePath("../../..")
 material/0 = SubResource( 18 )
 
 [node name="LegConnection4" type="MeshInstance" parent="Body/BelowBody/LegConnection2/Leg2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38419e-07, -1.46459, 0 )
+transform = Transform( 0.882948, -0.469472, 0, 0.469472, 0.882948, 0, 0, 0, 1, -2.38419e-07, -1.46459, 0 )
 mesh = SubResource( 3 )
 skeleton = NodePath("../../../..")
 material/0 = SubResource( 34 )
